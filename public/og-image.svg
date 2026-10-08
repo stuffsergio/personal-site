@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#ffffff"/>
+  <text x="80" y="200" font-family="Inter, system-ui, sans-serif" font-size="56" font-weight="700" fill="#2f2f2f">Sergio P&#233;rez</text>
+  <text x="80" y="280" font-family="Inter, system-ui, sans-serif" font-size="36" font-weight="500" fill="#555555">Frontend Developer (React)</text>
+  <text x="80" y="340" font-family="Inter, system-ui, sans-serif" font-size="28" fill="#9d9d9d">M&#225;laga, Espa&#241;a</text>
+  <rect x="80" y="400" width="420" height="8" fill="#079cf2" opacity="0.85"/>
+</svg>

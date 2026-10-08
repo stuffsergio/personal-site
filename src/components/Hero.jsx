@@ -13,8 +13,8 @@ export default function Hero() {
         />
       </div>
       <div className="hero__intro">
-        <h1 id="hero-name" className="hero__name">
-          {SITE.name}
+        <h1 id="hero-name" className="hero__name hero__name--long">
+          {SITE.name} — Frontend Developer (React) en Málaga, España
           <span className="hero__verified" title="Perfil verificado" aria-hidden>
             ✓
           </span>
