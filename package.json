@@ -5,9 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && vite build --ssr src/entry-server.jsx --outDir dist/server && node scripts/prerender.mjs && node scripts/generate-agent-assets.mjs",
     "lint": "oxlint",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "serve:agentic": "node server/static-server.mjs 4173 dist",
+    "test": "vitest run"
   },
   "dependencies": {
     "react": "^19.2.8",
@@ -16,6 +18,8 @@
   "devDependencies": {
     "@vitejs/plugin-react": "^6.1.1",
     "oxlint": "^1.81.0",
-    "vite": "^8.3.0"
+    "sharp": "^0.34.4",
+    "vite": "^8.3.0",
+    "vitest": "^3.2.4"
   }
 }

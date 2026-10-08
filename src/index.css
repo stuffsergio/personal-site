@@ -66,6 +66,62 @@ a:hover {
   margin: 0 auto;
 }
 
+.doc-main {
+  padding-bottom: 32px;
+}
+
+.doc h1 {
+  font-size: 1.65rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0 0 16px;
+}
+
+.doc h2 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 28px 0 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.doc p,
+.doc li {
+  color: var(--text);
+}
+
+.doc__lead {
+  font-size: 1.05rem;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.doc-list {
+  padding-left: 1.2rem;
+  margin: 0 0 16px;
+}
+
+.doc-list li {
+  margin-bottom: 10px;
+}
+
+.doc-muted {
+  color: var(--muted);
+}
+
+.doc--contact-intro {
+  margin-bottom: 8px;
+}
+
+.page--doc .section--contact {
+  margin-top: 0;
+}
+
+.site-header__est {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* Header */
 .site-header {
   position: sticky;
@@ -131,6 +187,12 @@ a:hover {
   object-fit: cover;
   display: block;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
+}
+
+.hero__name--long {
+  font-size: 1.35rem;
+  line-height: 1.35;
+  flex-wrap: wrap;
 }
 
 .hero__name {
@@ -686,6 +748,33 @@ a:hover {
   margin: 0 0 8px;
   font-size: 12px;
   color: var(--muted);
+}
+
+.site-footer__pages {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin: 20px 0 0;
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+}
+
+.site-footer__pages a {
+  text-decoration: none;
+  color: var(--muted);
+}
+
+.site-footer__pages a:hover {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: rgba(47, 47, 47, 0.35);
+}
+
+.site-footer__sep {
+  opacity: 0.65;
 }
 
 .site-footer__quote {
