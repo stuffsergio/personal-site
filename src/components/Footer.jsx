@@ -48,6 +48,17 @@ export default function Footer() {
         <blockquote className="site-footer__quote">
           &ldquo;He fallado mil veces; aquí vamos otra vez.&rdquo;
         </blockquote>
+        <nav className="site-footer__pages" aria-label="Páginas del sitio">
+          <a href="/about">/about</a>
+          <span className="site-footer__sep" aria-hidden>
+            ·
+          </span>
+          <a href="/contact">/contact</a>
+          <span className="site-footer__sep" aria-hidden>
+            ·
+          </span>
+          <a href="/privacy">/privacy</a>
+        </nav>
       </div>
       <div className="site-footer__bar">
         <div className="site-footer__identity">

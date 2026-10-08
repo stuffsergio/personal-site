@@ -16,6 +16,13 @@ function readDist(file) {
 }
 
 describe('prerendered HTML', () => {
+  it('index.html links to trust pages in the footer', () => {
+    const html = readDist('index.html');
+    expect(html).toMatch(/href="\/about"/);
+    expect(html).toMatch(/href="\/contact"/);
+    expect(html).toMatch(/href="\/privacy"/);
+  });
+
   const routes = ['index.html', 'about/index.html', 'contact/index.html', 'privacy/index.html'];
 
   for (const file of routes) {
