@@ -1,5 +1,6 @@
 import {
   SITE,
+  ENGLISH_LEVEL_ES,
   EXPERIENCE,
   STUFF_I_DO,
   VENTURES,
@@ -76,7 +77,7 @@ export function markdownAbout() {
     '',
     '## Idiomas',
     '',
-    'Español nativo. Cambridge English B2 (2023).',
+    `Español nativo. ${ENGLISH_LEVEL_ES}.`,
     '',
     '## Enlaces',
     '',

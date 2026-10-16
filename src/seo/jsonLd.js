@@ -1,4 +1,4 @@
-import { SITE } from '../data/content.js';
+import { SITE, ENGLISH_LEVEL_EN } from '../data/content.js';
 import { CANONICAL_ORIGIN, SEO } from '../data/siteMeta.js';
 
 export function buildPersonJsonLd() {
@@ -22,6 +22,15 @@ export function buildPersonJsonLd() {
       '@type': 'CollegeOrUniversity',
       name: 'Universidad de Málaga',
     },
+    knowsLanguage: [
+      { '@type': 'Language', name: 'Spanish', alternateName: 'es' },
+      {
+        '@type': 'Language',
+        name: 'English',
+        alternateName: 'en',
+        description: ENGLISH_LEVEL_EN,
+      },
+    ],
     knowsAbout: [
       'React',
       'JavaScript',
