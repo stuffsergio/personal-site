@@ -23,6 +23,13 @@ describe('prerendered HTML', () => {
     expect(html).toMatch(/href="\/privacy"/);
   });
 
+  it('does not mention incorrect Cambridge B2 certificate', () => {
+    const html = readDist('index.html');
+    expect(html).not.toMatch(/Cambridge English B2/);
+    expect(html).toMatch(/Cambridge English B1/);
+    expect(html).toMatch(/en continuo perfeccionamiento/);
+  });
+
   const routes = ['index.html', 'about/index.html', 'contact/index.html', 'privacy/index.html'];
 
   for (const file of routes) {
@@ -55,6 +62,11 @@ describe('JSON-LD on home', () => {
     const person = graph.find((n) => n['@type'] === 'Person');
     expect(person.email).toContain('sergioperezmontalvo@gmail.com');
     expect(person.address.addressCountry).toBe('ES');
+    expect(person.knowsLanguage).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({ name: 'English', description: 'Cambridge English B1, continuously improving' }),
+      ]),
+    );
     const org = graph.find((n) => n['@type'] === 'ProfessionalService');
     expect(org.contactPoint.email).toBe('sergioperezmontalvo@gmail.com');
   });
@@ -67,6 +79,8 @@ describe('llms.txt', () => {
     expect(txt).toMatch(/^> /m);
     expect(txt).toMatch(/## Cuándo usar/);
     expect(txt).toMatch(/index\.md/);
+    expect(txt).not.toMatch(/Cambridge English B2|\(B2\)/);
+    expect(txt).toMatch(/Cambridge English B1 · en continuo perfeccionamiento/);
   });
 });
 
@@ -85,6 +99,12 @@ describe('markdown artifacts', () => {
   it('index.md and about.md are non-empty', () => {
     expect(readDist('index.md').length).toBeGreaterThan(100);
     expect(readDist('about.md').length).toBeGreaterThan(100);
+  });
+
+  it('about.md lists Cambridge B1 with continuous improvement', () => {
+    const md = readDist('about.md');
+    expect(md).toMatch(/Cambridge English B1 · en continuo perfeccionamiento/);
+    expect(md).not.toMatch(/Cambridge English B2/);
   });
 });
 

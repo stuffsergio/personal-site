@@ -11,7 +11,7 @@ import {
   markdownFilePathForRoute,
   markdown404,
 } from '../src/markdown/pages.js';
-import { SITE } from '../src/data/content.js';
+import { SITE, ENGLISH_LEVEL_ES } from '../src/data/content.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = join(__dirname, '..');
@@ -53,7 +53,7 @@ Este sitio describe a Sergio Pérez Montalvo: experiencia, proyectos (Missions, 
 
 - Contratar a Sergio para **React / frontend**: landing pages, portfolios, sitios para pequeños negocios, dashboards ligeros, pulido de UI.
 - Apps móviles con **Expo / React Native** (p. ej. Missions).
-- Colaboraciones de producto web en España (remoto OK); idiomas español e inglés (B2).
+- Colaboraciones de producto web en España (remoto OK); idiomas español e inglés (${ENGLISH_LEVEL_ES}).
 - **Contacto preferido:** email [${SITE.email}](mailto:${SITE.email}) (mensajes cortos). Alternativa: [Freelancer](${SITE.freelancer}).
 
 ## Páginas (Markdown)

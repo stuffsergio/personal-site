@@ -1,3 +1,7 @@
+export const ENGLISH_LEVEL_ES =
+  'Cambridge English B1 · en continuo perfeccionamiento';
+export const ENGLISH_LEVEL_EN = 'Cambridge English B1, continuously improving';
+
 export const SITE = {
   name: 'Sergio Pérez',
   fullName: 'Sergio Pérez Montalvo',
@@ -43,7 +47,7 @@ export const EXPERIENCE = [
     role: 'Software Engineering',
     company: 'Universidad de Málaga',
     description:
-      'Grado en Ingeniería del Software. Cambridge English B2 (2023). HTML, CSS, JS y React en serio.',
+      `Grado en Ingeniería del Software. ${ENGLISH_LEVEL_ES}. HTML, CSS, JS y React en serio.`,
     icon: '🎓',
   },
 ];

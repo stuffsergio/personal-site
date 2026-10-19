@@ -1,4 +1,4 @@
-import { SITE, EXPERIENCE } from '../data/content';
+import { SITE, EXPERIENCE, ENGLISH_LEVEL_ES } from '../data/content';
 import StandaloneLayout from './StandaloneLayout';
 
 export default function AboutPage() {
@@ -13,7 +13,7 @@ export default function AboutPage() {
         </p>
         <p>
           Soy autodidacta con base académica sólida: grado en Ingeniería del Software en
-          la Universidad de Málaga (2022–2025), con Cambridge English B2 (2023). Me gusta
+          la Universidad de Málaga (2022–2025), con {ENGLISH_LEVEL_ES}. Me gusta
           iterar en público — por eso comparto código en{' '}
           <a href={SITE.github} target="_blank" rel="noreferrer">
             GitHub
